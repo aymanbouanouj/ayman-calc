@@ -1,0 +1,425 @@
+@import url(
+  "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+);
+
+
+/* =========================
+   Global
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --background: #050506;
+
+    --calculator-bg: rgba(17, 17, 22, 0.92);
+
+    --button-bg: rgba(255, 255, 255, 0.055);
+    --button-hover: rgba(255, 255, 255, 0.11);
+
+    --text-primary: #ffffff;
+    --text-secondary: #8e8e9d;
+
+    --purple: #8b5cf6;
+    --purple-light: #a855f7;
+    --purple-dark: #6d28d9;
+
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--text-primary);
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(124, 58, 237, 0.17),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #020203,
+            #08080c
+        );
+}
+
+
+/* =========================
+   Calculator
+========================= */
+
+.calculator {
+
+    width: 100%;
+    max-width: 390px;
+
+    padding: 22px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 28px;
+
+    background: var(--calculator-bg);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        0 0 40px rgba(124, 58, 237, 0.08);
+}
+
+
+/* =========================
+   Brand
+========================= */
+
+.brand {
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.brand-logo {
+
+    width: 48px;
+    height: 48px;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 22px rgba(139, 92, 246, 0.22);
+}
+
+
+.brand-text h1 {
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+
+.brand-text p {
+
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================
+   Display
+========================= */
+
+.display {
+
+    min-height: 130px;
+
+    margin-bottom: 18px;
+
+    padding: 20px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.history {
+
+    min-height: 22px;
+
+    margin-bottom: 6px;
+
+    text-align: right;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+#inputbox {
+
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text-primary);
+
+    text-align: right;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+
+    cursor: default;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+.button {
+
+    aspect-ratio: 1;
+
+    border: 1px solid transparent;
+
+    border-radius: 50%;
+
+    background: var(--button-bg);
+
+    color: var(--text-primary);
+
+    font-family: inherit;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.1s ease,
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.button:hover {
+
+    background: var(--button-hover);
+
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+
+.button:active {
+
+    transform: scale(0.91);
+}
+
+
+.button:focus-visible {
+
+    outline: 2px solid var(--purple);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   Utility Buttons
+========================= */
+
+.utility {
+
+    color: #d1c4ff;
+
+    background: rgba(139, 92, 246, 0.075);
+}
+
+
+/* =========================
+   Operators
+========================= */
+
+.operator {
+
+    color: #b89cff;
+
+    font-size: 25px;
+
+    background: rgba(139, 92, 246, 0.095);
+}
+
+
+.operator:hover {
+
+    background: rgba(139, 92, 246, 0.17);
+}
+
+
+/* =========================
+   Equal Button
+========================= */
+
+.equal {
+
+    color: white;
+
+    font-size: 26px;
+
+    font-weight: 600;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple-light),
+            var(--purple-dark)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.28);
+}
+
+
+.equal:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #b365ff,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 10px 30px rgba(124, 58, 237, 0.4);
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.credit {
+
+    margin-top: 22px;
+
+    text-align: center;
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+
+    letter-spacing: 0.15px;
+}
+
+
+.credit a {
+
+    margin: 0 3px;
+
+    color: #c4b5fd;
+
+    text-decoration: none;
+
+    transition: color 0.15s ease;
+}
+
+
+.credit a:hover {
+
+    color: white;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 430px) {
+
+    body {
+
+        padding: 12px;
+    }
+
+
+    .calculator {
+
+        max-width: 360px;
+
+        padding: 18px;
+
+        border-radius: 24px;
+    }
+
+
+    #inputbox {
+
+        font-size: 36px;
+    }
+
+
+    .buttons {
+
+        gap: 9px;
+    }
+
+
+    .button {
+
+        font-size: 19px;
+    }
+
+
+    .operator {
+
+        font-size: 23px;
+    }
+
+}

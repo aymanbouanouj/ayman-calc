@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="author"
+    content="Ayman Bounaouj"
+  >
+
+  <meta
+    name="description"
+    content="A modern calculator built with HTML, CSS and JavaScript by Ayman Bounaouj."
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="logo.png"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <title>Ayman Calc | Ayman Bounaouj</title>
+</head>
+
+<body>
+
+  <main class="calculator">
+
+    <!-- Brand -->
+    <header class="brand">
+
+      <img
+        src="logo.png"
+        alt="Ayman Bounaouj Logo"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+        <h1>Ayman Calc</h1>
+        <p>JavaScript Calculator</p>
+      </div>
+
+    </header>
+
+
+    <!-- Calculator display -->
+    <section class="display">
+
+      <div
+        id="history"
+        class="history"
+        aria-live="polite"
+      ></div>
+
+      <input
+        type="text"
+        id="inputbox"
+        value="0"
+        aria-label="Calculator display"
+        readonly
+      >
+
+    </section>
+
+
+    <!-- Calculator buttons -->
+    <section class="buttons">
+
+      <button
+        class="button utility"
+        data-action="clear"
+      >
+        AC
+      </button>
+
+      <button
+        class="button utility"
+        data-action="delete"
+      >
+        DEL
+      </button>
+
+      <button
+        class="button utility"
+        data-action="percent"
+      >
+        %
+      </button>
+
+      <button
+        class="button operator"
+        data-action="operator"
+        data-value="/"
+      >
+        ÷
+      </button>
+
+
+      <button class="button number" data-value="7">7</button>
+      <button class="button number" data-value="8">8</button>
+      <button class="button number" data-value="9">9</button>
+
+      <button
+        class="button operator"
+        data-action="operator"
+        data-value="*"
+      >
+        ×
+      </button>
+
+
+      <button class="button number" data-value="4">4</button>
+      <button class="button number" data-value="5">5</button>
+      <button class="button number" data-value="6">6</button>
+
+      <button
+        class="button operator"
+        data-action="operator"
+        data-value="-"
+      >
+        −
+      </button>
+
+
+      <button class="button number" data-value="1">1</button>
+      <button class="button number" data-value="2">2</button>
+      <button class="button number" data-value="3">3</button>
+
+      <button
+        class="button operator"
+        data-action="operator"
+        data-value="+"
+      >
+        +
+      </button>
+
+
+      <button class="button number" data-value="00">00</button>
+      <button class="button number" data-value="0">0</button>
+
+      <button
+        class="button number"
+        data-action="decimal"
+      >
+        .
+      </button>
+
+      <button
+        class="button equal"
+        data-action="equals"
+      >
+        =
+      </button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="credit">
+
+      <span>Built by</span>
+
+      <a
+        href="https://github.com/aymanbouanouj"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ayman Bounaouj
+      </a>
+
+      <span> 2026</span>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
