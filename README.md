@@ -8,6 +8,16 @@
   A modern, responsive calculator built with HTML, CSS, and vanilla JavaScript.
 </p>
 
+<p align="center">
+  <a href="https://aymanbouanouj.github.io/ayman-calc/"><strong>Live Demo</strong></a>
+</p>
+
+## Preview
+
+<p align="center">
+  <img src="assets/preview.svg" alt="Ayman Calc interface preview" width="650">
+</p>
+
 ## About
 
 **Ayman Calc** is a lightweight calculator project focused on clean UI, responsive design, and clear JavaScript logic without using `eval()`.
@@ -54,6 +64,8 @@ The calculator supports mouse, touch, and keyboard input and includes common cal
 
 ```text
 ayman-calc/
+├── assets/
+│   └── preview.svg
 ├── index.html
 ├── style.css
 ├── script.js
