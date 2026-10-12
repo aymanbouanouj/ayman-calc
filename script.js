@@ -27,6 +27,8 @@ let calculationFinished = false;
 
 let hasError = false;
 
+const MAX_INPUT_DIGITS = 14;
+
 
 /* =========================
    Display
@@ -167,7 +169,10 @@ function inputNumber(number) {
                 .replace(".", "")
                 .length;
 
-        if (rawLength >= 14) {
+        const projectedLength =
+            rawLength + number.length;
+
+        if (projectedLength > MAX_INPUT_DIGITS) {
 
             return;
         }
